@@ -1,0 +1,14 @@
+
+        h1{
+            background-color: blue;
+           color: red;
+            font-style: italic;
+
+        }
+        h2{
+            background-color: blueviolet;
+            font-style: italic;
+            color: red;
+            text-transform: uppercase;
+        }
+  
