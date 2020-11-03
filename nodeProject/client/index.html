@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-2.2.3.min.js">
+
+    </script>
+    <script>
+       $(document).ready(function(){
+           $('#allbooks').click(function(){
+               var url='http://localhost:3000/showBooks';
+             $.get(url,function(data,status){
+                 data.forEach(book => {
+                     var str='';
+                     for(const prop in book){
+                         str+=prop+''+book[prop]+''+'<br>';
+                     }
+                     $('#myid').append(str).append('<br>');
+                 });
+             })
+           });
+
+           $('#authbooks').click(function(){
+               var url='http://localhost:3000/showByAuthor';
+               var authchoice =$('#author').val();
+             $.get(url,function(data,status){
+                 data.forEach(book => {
+                     var str='';
+                     for(const prop in book){
+                         str+=prop+''+book[prop]+''+'<br>';
+                     }
+                     $('#myid').append(str).append('<br>');
+                 });
+             })
+           });
+           $('#catbooks').click(function(){
+               var url='http://localhost:3000/showByCategory';
+               var authchoice =$('#category').val();
+             $.get(url,function(data,status){
+                 data.forEach(book => {
+                     var str='';
+                     for(const prop in book){
+                         str+=prop+''+book[prop]+''+'<br>';
+                     }
+                     $('#myid').append(str).append('<br>');
+                 });
+             })
+           });
+           
+       });
+    </script>
+</head>
+<body>
+    <button id="allbooks" >show books</button><br>
+    <input type="text" id="author">
+    <button id="authbooks" >showBYAuthor</button><br>
+    <input type="text" id="author">
+    <button id="catbooks" >showByCategory</button>
+
+    <div id="myid">
+
+    </div>
+</body>
+</html>
