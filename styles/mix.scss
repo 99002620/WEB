@@ -1,0 +1,36 @@
+@mixin header_style {
+    background-color: aqua;
+    letter-spacing: 3px;
+    color: hotpink;
+    text-transform: uppercase;
+}
+
+@mixin para_style {
+    background-color: ivory;
+    color: lightcyan;
+    
+}
+@mixin border_style($color:red,$bgcolor:yellow) {
+    border: $color solid $width;
+    background-color: $bgcolor;
+    
+}
+
+ #h1{
+   @extend h2;
+
+    text-transform: lowercase;
+}
+
+#h2{
+    @include para_style();
+    background-color: lightgreen;
+}
+p{
+    @include header_style();
+
+}
+div p{
+@extend h1;
+@extend h2;
+}
