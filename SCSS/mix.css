@@ -1,0 +1,20 @@
+h1 {
+  background-color: aqua;
+  letter-spacing: 3px;
+  color: hotpink;
+  text-transform: uppercase;
+  text-transform: lowercase;
+}
+
+h2 {
+  background-color: ivory;
+  color: lightcyan;
+  background-color: lightgreen;
+}
+
+p {
+  background-color: aqua;
+  letter-spacing: 3px;
+  color: hotpink;
+  text-transform: uppercase;
+}
