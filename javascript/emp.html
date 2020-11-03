@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hello(){
+           name= document.getElementById("name").value;
+           age= document.getElementById("age").value;
+        
+           document.getElementById("my").innerHTML="welcome to "+name;
+           document.getElementById("my1").innerHTML="welcome to "+age;
+
+        }
+    </script>
+</head>
+<body>
+   Name: <input type="text" id="name" value=""><br/><br/>
+   Age  :  <input type="number" id="age" ><br/><br/>
+    <input type="button" name="submit" value="submit" onclick="hello()">
+    <div style="background-color: aqua;", id="my"></div>
+    <p id="my1" style="background-color:orange;"></p>
+</body>
+</html>

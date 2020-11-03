@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun()
+        {
+            if(document.getElementById("myname").value=="")
+            {
+                alert("enter your name");
+                document.myform.name.focus();
+            }else if(document.getElementById("password").value=="")
+            {
+                alert("enter your password");
+                document.myform.pass.focus();
+            }else if(document.getElementById("age").value=="")
+            {
+                alert("enter your age");
+                document.myform.age1.focus();
+            }else{
+                alert("your registred");
+                document.myform.submit();
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <form action="demojs.html" name="myform" onclick="fun()">
+        <table>
+        <tr> 
+            <th>Name </th>
+                <td><input type="text" name="name" id="myname" required /><br /> <br /></td>
+            </tr>   
+            <tr>
+                <th>  Password</th>
+                    <td><input type="password" pattern="[0-9]{10} [a-z][A-Z]" name="pass" id="password" ><br> </td><br />
+        
+        
+            </tr>
+       <th> Age </th>
+           <td><input type="number" name="age1" id="age" required min="18" max="80" step="2"/><br /></td> 
+    </tr>
+   
+   
+</table>
+<input type="button" value="button">
+    </form>
+</body>
+</html>
